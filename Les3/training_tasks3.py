@@ -96,3 +96,28 @@ else:
 # После чего программа должна произвести нужную математическую операцию и вывести
 # результат. Пример: 21/3. Ответ: 7
 calculation = input("Введите пример для двух чисел:")
+operators = "+-*/"
+num1 = ''
+num2 = ''
+operator = ''
+for i in calculation:
+    if i not in operators:
+        if not operator:
+            num1 += i
+        else:
+            num2 += i
+    else:
+        operator = i
+
+num1 = int(num1)
+num2 = int(num2)
+if operator == '+':
+    print(f"{num1} + {num2} = {num1 + num2}")
+elif operator == '-':
+    print(f"{num1} - {num2} = {num1 - num2}")
+elif operator == '*':
+    print(f"{num1} * {num2} = {num1 * num2}")
+elif operator == '/':
+    print(f"{num1} / {num2} = {num1 / num2}")
+else:
+    print("Операция не известна")
