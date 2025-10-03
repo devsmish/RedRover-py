@@ -1,15 +1,13 @@
 # Class work
 # Задание 1. Дан список list1 = [1, ’1’, 4, 7, ’’, 1, ‘word’, [1, 2, 3], 4]. Выведите список, в
 # котором будут только уникальные элементы. Кавычки в списке придётся заменить самостоятельно.
-from sqlalchemy.dialects.mysql import insert
-from sqlalchemy.sql.base import elements
 
 list1 = [1, '1', 4, 7, '', 1, 'word', [1, 2, 3], 4]
-unilist = []
+uni_list = []
 for i in list1:
-    if i not in unilist:
-        unilist.append(i)
-print(unilist)
+    if i not in uni_list:
+        uni_list.append(i)
+print(uni_list)
 
 # Задание 2. Создайте переменную text, значение которой определяется с помощью ввода данных с
 # клавиатуры. Выведите список с длинами каждого слова в строке text. Слова в тексте разделяются
@@ -51,12 +49,12 @@ if palindrom:
 # определяется с помощью ввода данных с клавиатуры. Сдвиньте имеющийся список вправо и влево
 # на указанное число символов.
 elements_count = int(input("Введите целое число:"))
-list = []
+first_list = []
 for i in range(elements_count):
-    list.append(i)
+    first_list.append(i)
 displacement = int(input("Введите смещение для списка:"))
-list_plus2_disp = list.copy()
-list_minus2_disp = list.copy()
+list_plus2_disp = first_list.copy()
+list_minus2_disp = first_list.copy()
 # смещаем вправо
 for i in range(displacement):
     temp = list_plus2_disp.pop()
@@ -65,6 +63,6 @@ for i in range(displacement):
 for i in range(displacement):
     temp = list_minus2_disp.pop(0)
     list_minus2_disp.append(temp)
-print(list)
+print(first_list)
 print(list_plus2_disp)
 print(list_minus2_disp)

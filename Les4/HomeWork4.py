@@ -16,13 +16,13 @@ print(numbers)
 # вещественные числа (float) из списка items. Выведите на экран сумму чисел в numbers.
 items = [1.2, 3, None, 100, {'info': 'bla-bla'}, 44, 'Hi!', 99, 44.32, None]
 numbers = []
-sum = 0
+result = 0
 for item in items:
     if type(item) == int or type(item) == float:
         numbers.append(item)
-        sum += item
+        result += item
 print(numbers)
-print(f"Сумма всех чисел из списка = {sum}")
+print(f"Сумма всех чисел из списка = {result}")
 
 # Задание 3. История сообщений. Создать список messages, который будет хранить “сообщения”.
 # Программа должна в бесконечном цикле запрашивать у пользователя ввести сообщение (строку) с
