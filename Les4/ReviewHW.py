@@ -31,3 +31,21 @@ for i in text:
             word_list.append(word)
             word = ''
 print(word_list)
+
+# Задание 2. Создайте переменную text, значение которой определяется с помощью ввода данных
+# с клавиатуры. Выведите список, в котором каждое слово будет перевёрнуто.
+text = input("Enter any text:")
+signs = [' ', '-', ':', ',', '.', ';', '?', '!', '_', '-', "'", '"', '/', '&', '$', '@', '+']
+word_list = []
+word = ''
+for i in text:
+    if i not in signs:
+        word += i
+    elif i in signs:
+            word_list.append(word[::-1])
+            word = ''
+if len(word) > 0:
+    word_list.append(word[::-1])
+print(word_list)
+
+# Задание 3. 
