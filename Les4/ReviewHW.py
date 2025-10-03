@@ -16,3 +16,18 @@ while len(text) > length:
     elif len(text) == 0:
         break
 print(list)
+
+# вариант ввода предложениями
+text = input("Enter any text:")
+length = int(input("Введите минимальную длину слова:"))
+signs = [' ', '-', ':', ',', '.', ';', '?', '!', '_', '-', "'", '"', '/', '&', '$', '@', '+']
+word_list = []
+word = ''
+for i in text:
+    if i not in signs:
+        word += i
+    elif i in signs:
+        if len(word) > length:
+            word_list.append(word)
+            word = ''
+print(word_list)
