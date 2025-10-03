@@ -27,3 +27,19 @@ for c in text:
 if count != 0:
     count_letters.append(count)
 print(count_letters)
+# Задание 3. Определите, является ли введенное пользователем слово палиндромом. Решите эту
+# задачу используя списки и не используя функцию reverse или срезы.
+text = input("Enter any word:")
+word = list(text.lower())
+long_word = len(word) // 2
+palindrom = True
+for i in range (long_word):
+    if word[i] == word[(i+1)*(-1)]:
+        continue
+    else:
+        print("Слово", text, "НЕ ПАЛИНДРОМ")
+        palindrom = False
+        break
+if palindrom:
+    print("Слово", text, "ПАЛИНДРОМ")
+# Задание 4. 
