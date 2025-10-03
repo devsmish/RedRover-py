@@ -1,6 +1,9 @@
 # Class work
 # Задание 1. Дан список list1 = [1, ’1’, 4, 7, ’’, 1, ‘word’, [1, 2, 3], 4]. Выведите список, в
 # котором будут только уникальные элементы. Кавычки в списке придётся заменить самостоятельно.
+from sqlalchemy.dialects.mysql import insert
+from sqlalchemy.sql.base import elements
+
 list1 = [1, '1', 4, 7, '', 1, 'word', [1, 2, 3], 4]
 unilist = []
 for i in list1:
@@ -42,4 +45,31 @@ for i in range (long_word):
         break
 if palindrom:
     print("Слово", text, "ПАЛИНДРОМ")
-# Задание 4. 
+# Задание 4. Создайте переменную - количество элементов в списке, которая определяется с
+# помощью ввода данных с клавиатуры. Создайте список, который будет заполнен с помощью ввода
+# значений с клавиатуры. Создайте ещё одну переменную - желаемый сдвиг списка, которая
+# определяется с помощью ввода данных с клавиатуры. Сдвиньте имеющийся список вправо и влево
+# на указанное число символов.
+elements_count = int(input("Введите целое число:"))
+list = []
+for i in range(elements_count):
+    list.append(i)
+displacement = int(input("Введите смещение для списка:"))
+list_plus2_disp = list.copy()
+list_minus2_disp = list.copy()
+# смещаем вправо
+for i in range(displacement):
+    temp = list_plus2_disp.pop()
+    list_plus2_disp.insert(0, temp)
+# смещаем влево
+for i in range(displacement):
+    temp = list_minus2_disp.pop(0)
+    list_minus2_disp.append(temp)
+print(list)
+print(list_plus2_disp)
+print(list_minus2_disp)
+
+# Home work
+# Задание 5. Создайте переменную text, значение которой определяется с помощью ввода данных с
+# клавиатуры. Создайте переменную length - минимальная длина слова, определяемая с помощью
+# ввода данных с клавиатуры. Выведите список со всеми словами, чья длина больше length.
