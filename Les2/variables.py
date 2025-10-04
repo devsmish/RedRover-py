@@ -6,20 +6,20 @@ text = "Мой текст"
 greetings = "Hi!"
 
 # задание 2
-name = "Сергей"
-print('Привет, меня зовут', name)
+first_name = "Сергей"
+print('Привет, меня зовут', first_name)
 
 # Способ 2
-print(f"Привет, меня зовут {name}.")
+print(f"Привет, меня зовут {first_name}.")
 
 # Способ 3
-message = "Привет, меня зовут" + " " + name + "."
+message = "Привет, меня зовут" + " " + first_name + "."
 print(message)
 
 # задание 3
-name = input("Enter your name: ")
-surname = input("Enter your secondname: ")
-title_name = name.title()
+first_name = input("Enter your name: ")
+surname = input("Enter your second_name: ")
+title_name = first_name.title()
 title_surname = surname.title()
 print("Привет, меня зовут", title_name, title_surname)
 

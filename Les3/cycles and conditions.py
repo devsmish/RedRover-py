@@ -34,7 +34,7 @@ for c in message:
 print("Всего гласных букв:", count)
 
 # Задание 5
-sum = 0
+res = 0
 a = 0
 while a>=0:
     a = float(input("Enter any number: "))
@@ -46,6 +46,6 @@ while a>=0:
         break
     else:
         print("Вы ввели целое число. Программа продолжает работу")
-    sum = sum + a
+    res = res + a
 
-print("Сумма введенных чисел =", sum)
+print("Сумма введенных чисел =", res)
